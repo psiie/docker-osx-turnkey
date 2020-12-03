@@ -18,11 +18,7 @@ fi
 
 if ! [[ -x "$(command -v docker-compose)" ]]; then
   echo "docker-compose not installed or detected. Docker-compose is required"
-  exit
-fi
-
-if ! [[ -x "$(command -v sed)" ]]; then
-  echo "sed not installed or detected. sed is required"
+  echo "Install docker-compose with: \"sudo curl -L \"https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose\""
   exit
 fi
 
@@ -49,7 +45,6 @@ cd `pwd`/docker-osx
 if ! [[ -f docker-compose.yml ]]; then
   echo "Pulling down docker-compose.yml"
   curl -o docker-compose.yml https://raw.githubusercontent.com/sickcodes/Docker-OSX/master/docker-compose.yml
-  sed -i '/SIZE=/ s/200G/16G/' docker-compose.yml
 fi
 
 if ! [[ -f Dockerfile ]]; then
