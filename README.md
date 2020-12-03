@@ -7,6 +7,7 @@ This project uses the `sickcodes/Docker-OSX` project as it's base. Just made sim
 Feel free to audit any code (it is encouraged)!
 
 ## How to
+**Requires Linux**
 Paste this one-liner into bash to initialize the script.
 CDN: `curl -sSL https://raw.githack.com/darkenvy/docker-osx-turnkey/main/docker-osx-automated.sh | sudo bash`
 
